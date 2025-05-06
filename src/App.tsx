@@ -1,10 +1,20 @@
+import { Table } from "./components";
 import "./styles.css";
+
+const columns = [
+  { header: "Ad", accessor: "name" },
+  { header: "Yaş", accessor: "age" },
+];
+
+const data = [
+  { name: "Əli", age: 25 },
+  { name: "Aytac", age: 30 },
+];
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Table columns={columns} data={data} />
     </div>
   );
 }
